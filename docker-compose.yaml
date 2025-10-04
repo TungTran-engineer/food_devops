@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb+srv://<username>:<password>@<cluster-url>/devops?retryWrites=true&w=majority
+      - JWT_SECRET=jwtsecret123
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  admin:
+    build:
+      context: ./admin
+    container_name: admin
+    restart: always
+    ports:
+      - "8000:80"
+    depends_on:
+      - backend
+
