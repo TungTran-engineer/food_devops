@@ -6,7 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // config variables
 const currency = "inr";
 const deliveryCharge = 50;
-const frontend_URL = 'https://tomato-frontend-ds0g.onrender.com';
+const frontend_URL = 'http://107.22.29.8:3000';
 
 // Placing User Order for Frontend
 const placeOrder = async (req, res) => {

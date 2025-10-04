@@ -15,7 +15,7 @@ const Navbar = ({ setShowLogin }) => {
     const fetchProfile = async () => {
       if (!token) return;
       try {
-        const res = await axios.get("http://localhost:4000/api/user/profile", {
+        const res = await axios.get("http://107.22.29.8:5000/api/user/profile", {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.data.success) {
@@ -56,7 +56,7 @@ const Navbar = ({ setShowLogin }) => {
             {/* ✅ Avatar thay cho icon */}
             {avatar ? (
               <img 
-                src={`http://localhost:4000${avatar}`} 
+                src={`http://107.22.29.8:5000${avatar}`} 
                 alt="avatar" 
                 className="navbar-avatar" 
               />
@@ -67,7 +67,7 @@ const Navbar = ({ setShowLogin }) => {
             <ul className='navbar-profile-dropdown'>
               <li onClick={()=>navigate('/profile')}>
                 {avatar ? (
-                  <img src={`http://localhost:4000${avatar}`} alt="avatar" className="dropdown-avatar" />
+                  <img src={`http://107.22.29.8:5000${avatar}`} alt="avatar" className="dropdown-avatar" />
                 ) : (
                   <img src={assets.profile_icon} alt="" />
                 )}
