@@ -10,7 +10,7 @@ services:
       - "5000:5000"
     environment:
       - PORT=5000
-      - MONGO_URI=mongodb+srv://<username>:<password>@<cluster-url>/devops?retryWrites=true&w=majority
+      - MONGO_URI=mongodb+srv://Tunglatoi2004:Tunglatoi2004@cluster0.ax95miq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
       - JWT_SECRET=jwtsecret123
 
   frontend:
