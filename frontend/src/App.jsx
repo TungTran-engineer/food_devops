@@ -10,7 +10,7 @@ import MyOrders from './pages/MyOrders/MyOrders'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify/Verify';
-import Profile from './pages/Profile/profile';
+import Profile from './pages/Profile/Profile';
 
 
 

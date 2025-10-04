@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import "./profile.css";
+import "./Profile.css";
 import { StoreContext } from "../../Context/StoreContext";
 
 const Profile = () => {
