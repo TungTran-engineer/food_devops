@@ -1,0 +1,110 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;      /* Căn giữa avatar & info theo chiều dọc */
+  justify-content: flex-start;
+  gap: 40px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 25px 40px;
+  border: 1px solid #eee;
+  min-width: 700px;
+  max-width: 900px;
+}
+
+.profile-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #3498db;
+  overflow: hidden;         /* Cắt ảnh theo khung tròn */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ecf0f1;
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* Ảnh vừa khung */
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Nội dung căn giữa theo chiều dọc */
+}
+
+.profile-info p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #34495e;
+  line-height: 1.5;
+}
+
+.profile-info p strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.profile-update-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.profile-update-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.profile-update-btn.cancel {
+  background: #e74c3c;
+  margin-left: 10px;
+}
+
+.profile-loading {
+  text-align: center;
+  color: #7f8c8d;
+  margin-top: 60px;
+  font-size: 18px;
+}
+
+.profile-error {
+  text-align: center;
+  color: #e74c3c;
+  margin-top: 60px;
+  font-size: 18px;
+}
