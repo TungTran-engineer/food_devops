@@ -14,4 +14,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = 'https://tomato-food-del-backend-p1ni.onrender.com'
+export const url = 'http://107.22.29.8:5000'
