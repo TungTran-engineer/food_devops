@@ -1,6 +1,15 @@
 version: '3.8'
 
 services:
+  mongo:
+    image: mongo:6.0
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
   backend:
     build:
       context: ./backend
@@ -10,8 +19,10 @@ services:
       - "5000:5000"
     environment:
       - PORT=5000
-      - MONGO_URI=mongodb+srv://Tunglatoi2004:Tunglatoi2004@cluster0.ax95miq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - MONGO_URI=mongodb://mongo:27017/devops
       - JWT_SECRET=jwtsecret123
+    depends_on:
+      - mongo
 
   frontend:
     build:
@@ -33,3 +44,5 @@ services:
     depends_on:
       - backend
 
+volumes:
+  mongo-data:
